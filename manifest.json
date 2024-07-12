@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "CSES Helper",
+  "version": "1",
+  "author": "SamudraMitra",
+  "action": {
+      "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://cses.fi/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://cses.fi/*"
+      ],
+      "js": [
+        "./scripts/main.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
